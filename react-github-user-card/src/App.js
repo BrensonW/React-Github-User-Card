@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import './App.css';
 import UserCard from './components/UserCard';
+import ContributionGraphic from './components/ContributionGraphic';
 
 // styling
 
@@ -25,7 +26,9 @@ class App extends Component {
   state = {
     userInfo: {},
     followers: [],
+    
   };
+  
 
   componentDidMount() {
     console.log("SV: App.js: App, CDM: CDM running");
@@ -60,7 +63,8 @@ class App extends Component {
    return(
      <Body>
        <Headline>Github User Profiles!</Headline>
-       <UserCard userInfo={this.state.userInfo} />
+       <UserCard userInfo={this.state.userInfo}   />
+       <ContributionGraphic />
        {this.state.followers.map((follower) => {
          return <UserCard key={follower.id} userInfo={follower} />
        })}
