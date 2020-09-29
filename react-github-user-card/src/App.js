@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
-import logo from './logo.svg';
 import './App.css';
 import UserCard from './components/UserCard';
 
@@ -17,9 +16,9 @@ font-size: 2rem;
 display: flex;
 align-items: center;
 justify-content: center;
-background: blue;
-color: orange;
-padding-bottom: 30%;
+background: chocolate;
+color: blueviolet;
+padding-bottom: 5%;
 `;
 
 class App extends Component {
@@ -29,25 +28,24 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log("SV: app.js: App, CDM: CDM running");
+    console.log("SV: App.js: App, CDM: CDM running");
 
     // Fetching User Profile
 
-fetch("https://api.github.com/users/BrensonW")
-.then((res) => res.json())
-.then((json) => {
-  this.setState({userInfo: json});
-  console.log("SV: App.js: CMD: success!", this.state.userInfo);
-})
-.catch((err) => console.log(err));
+  fetch("https://api.github.com/users/brensonw")
+    .then((res) => res.json())
+    .then((json) => {
+      this.setState({userInfo: json});
+      console.log("SV: App.js: CMD: success!", this.state.userInfo);
+  })
+  .catch((err) => console.log(err));
 
 
 // Fetching User Followers
-
-fetch("https://api.github.com/users/BrensonW/followers")
+ fetch("https://api.github.com/users/brensonw/followers")
 .then((res) => res.json())
 .then((json) => {
-  this.setState({ followers: json });
+  this.setState({followers: json});
   console.log("SV: App.js: CMD: success!", this.state.followers);
 })
 .catch((err) => console.log(err));
@@ -58,7 +56,7 @@ fetch("https://api.github.com/users/BrensonW/followers")
 
 
  render() {
-   console.log("sv: App.js: App, render");
+   console.log("SV: App.js: App, render");
    return(
      <Body>
        <Headline>Github User Profiles!</Headline>

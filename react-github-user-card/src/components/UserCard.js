@@ -11,8 +11,8 @@ const Card = styled.div`
 display: flex;
 justify-content: center;
 background: chocolate;
-margin: 20% 300% 20% 150%;
-width: 75%;
+margin: 7% 0 7% 35%;
+width: 30%;
 height: auto;
 `;
 
@@ -22,7 +22,7 @@ const UserCard = (props) => {
 
     return(
         <Card>
-            <img src={props.userInfo.avatar_url} />
+            <img width="200"  src={props.userInfo.avatar_url} alt="Profile Pictures of account" />
             <div>
                 <h3>{props.userInfo.name}</h3>
                 <p>{props.userInfo.login}</p>
