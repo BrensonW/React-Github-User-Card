@@ -14,6 +14,7 @@ background: chocolate;
 margin: 7% 0 7% 35%;
 width: 30%;
 height: auto;
+
 `;
 
 
