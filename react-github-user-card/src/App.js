@@ -35,7 +35,7 @@ class App extends Component {
 
     // Fetching User Profile
 
-  fetch("https://api.github.com/users/brensonw")
+  fetch("https://api.github.com/users/BrensonW")
     .then((res) => res.json())
     .then((json) => {
       this.setState({userInfo: json});
@@ -45,7 +45,7 @@ class App extends Component {
 
 
 // Fetching User Followers
- fetch("https://api.github.com/users/brensonw/followers")
+ fetch("https://api.github.com/users/BrensonW/followers")
 .then((res) => res.json())
 .then((json) => {
   this.setState({followers: json});

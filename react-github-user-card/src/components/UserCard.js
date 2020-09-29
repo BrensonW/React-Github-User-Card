@@ -14,7 +14,7 @@ background: chocolate;
 margin: 7% 0 7% 35%;
 width: 30%;
 height: auto;
-
+box-shadow: 7px 20px 15px 5px;
 `;
 
 

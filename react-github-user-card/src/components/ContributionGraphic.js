@@ -7,6 +7,7 @@ const Graph = styled.div`
 background-color: chocolate;
 width: 65%;
 margin-left: 20%;
+box-shadow: 7px 20px 15px 5px grey;
 `;
 
 const graphic = document.getElementsByClassName("graphic");
